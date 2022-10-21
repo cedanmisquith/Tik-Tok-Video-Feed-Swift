@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TikTok_Video_Feed_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vCN-IK-eci">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="DNb-Dj-mVT"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="eCn-Gk-zqo"/>
+                                </connections>
+                            </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mjO-aJ-i22">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="BHT-ZY-B8U"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mjO-aJ-i22" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7DB-Nm-law"/>
+                            <constraint firstItem="mjO-aJ-i22" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7JE-Ou-ZPG"/>
+                            <constraint firstAttribute="bottom" secondItem="vCN-IK-eci" secondAttribute="bottom" id="JXc-Dm-JiK"/>
+                            <constraint firstItem="vCN-IK-eci" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QQr-Ep-Xdf"/>
+                            <constraint firstItem="vCN-IK-eci" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UfD-rp-ohm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mjO-aJ-i22" secondAttribute="trailing" id="aiv-oR-2Vk"/>
+                            <constraint firstItem="vCN-IK-eci" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="w6I-3e-XJp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="vCN-IK-eci" id="bke-bV-Dn2"/>
+                        <outlet property="topGradientImageView" destination="mjO-aJ-i22" id="DYP-G2-xPV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="36.92307692307692" y="3.5545023696682461"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
